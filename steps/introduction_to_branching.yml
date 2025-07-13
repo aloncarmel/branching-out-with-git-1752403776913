@@ -1,0 +1,37 @@
+id: introduction_to_branching
+learningObjectives:
+  - Understand the purpose of branching in Git.
+hints:
+  - Think about how parallel tasks are managed in real life and how this concept
+    applies to coding.
+  - "Check out Git's own documentation on branching: [Git
+    Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutsh\
+    ell)"
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to "Branching Out with Git"! I'm Lucca, and today, I'll be your
+              guide through the wild world of Git branching strategies.
+          - text: Branching in Git is like creating alternate realities in your code base.
+              Each branch can evolve independently without disturbing the main
+              project.
+          - text: The magic of Git lies in its ability to manage these branches, helping
+              developers work concurrently and collaborate seamlessly.
+          - text: So, why is branching important? It allows for parallel development,
+              meaning teams can work on different features simultaneously.
+          - text: By exploring branching strategies, you'll gain better version control
+              skills, improve collaboration, and manage your project's code with
+              finesse.
+          - text: Ready to dive deeper and explore the various branching strategies in Git?
+              Let's branch out to the next step when you're ready!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
