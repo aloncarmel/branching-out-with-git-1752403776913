@@ -1,0 +1,64 @@
+id: quiz_branching_strategies
+learningObjectives:
+  - Identify which scenario fits each branching strategy.
+hints:
+  - Review the main traits of GitFlow particularly its emphasis on feature,
+    develop, and release branches.
+  - Focus on differentiation between how different branches are utilized.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Time to test your skills! Which of the following scenarios best fits the
+              GitFlow strategy?
+          - text: Choose wisely, young Padawan, for each choice reflects the core of
+              different branching strategies.
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - A large enterprise project with several teams working on different
+            features, needing clear staging phases.
+          - A startup with a small team that values a simple and flexible
+            process, releasing frequently.
+          - Developers who prefer to commit directly to the main branch and
+            release features as they're ready.
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Correct! Gitflow is perfect for complex projects with distinct development
+                      stages and team collaborations.
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Not quite the right fit. This sounds more like GitHub Flow, which is ideal
+                      for streamlined and frequent releases.
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Close, but no cigar. This resembles trunk-based development, not GitFlow.
+            - actionId: replay_action
+              params:
+                actionName: quiz
