@@ -1,0 +1,39 @@
+id: essentials_of_gitflow
+learningObjectives:
+  - Learn the Gitflow branching strategy.
+hints:
+  - Remember, develop branch is your pre-production area.
+  - Visualize the workflow to understand how all branches interact.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Next stop: Gitflow! Gitflow is a comprehensive branching strategy that
+              sets up a clear workflow involving multiple branches."
+          - text: "Here's how it works: your repository starts with two main branches -
+              master and develop. Master is your production-ready code, while
+              develop serves as a base for feature branches."
+          - text: New features go into separate feature branches, which are then merged back
+              into develop when complete. For releases, a release branch is
+              created from develop and polished until it's ready to merge into
+              master.
+          - text: Each concept in Gitflow is like a role in a play, ensuring tasks are
+              organized and responsibilities are clear. This helps maintain code
+              quality and reduces errors.
+          - text: Sound complex? It can be, but with practice, it becomes a well-oiled
+              machine.
+          - text: "To learn more about Gitflow, see this detailed guide: [Gitflow
+              Workflow](https://www.atlassian.com/git/tutorials/comparing-workf\
+              lows/gitflow-workflow)."
+          - text: Feeling like a Gitflow pro? When you're ready, let's explore another
+              strategy!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
