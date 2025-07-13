@@ -1,0 +1,32 @@
+id: git_branch_strategies
+title: Branching Out with Git
+subtitle: Master version control with Git branching
+description: >-
+  Embark on a quest to demystify Git branching strategies, a vital tool in
+  effective software development. Branching encourages parallel development,
+  making it crucial for collaboration and maintaining code integrity.
+
+
+  In this exciting journey, you will learn about key strategies such as Gitflow, GitHub Flow, and the trunk-based model. You'll understand their distinct advantages, use cases, and how to choose the right strategy for your team.
+
+
+  By completing this quest, you'll become adept at implementing these strategies to streamline your workflow, enhance collaboration with teammates, and efficiently manage code changes.
+
+
+  Get ready to elevate your version control skills, as Lucca guides you through this fascinating exploration of Git branching strategies with practical insights and a touch of humor!
+level: intermediate
+duration: 0.6666666666666666
+skills:
+  - version control
+  - collaboration
+  - software development
+steps:
+  - introduction_to_branching
+  - essentials_of_gitflow
+  - essentials_of_github_flow
+  - exploring_trunk_based_development
+  - quiz_branching_strategies
+  - open_question_decision_making
+  - open_question_best_practices
+type: MODULE
+repository: null
