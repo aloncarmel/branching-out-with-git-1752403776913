@@ -1,0 +1,37 @@
+id: essentials_of_github_flow
+learningObjectives:
+  - Understand the basics of the GitHub Flow strategy.
+hints:
+  - Focus on how often your team deploys and the complexity of tasks.
+  - "Read more: [GitHub Flow
+    guide](https://guides.github.com/introduction/flow/)."
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to GitHub Flow, the next frontier in our branching strategy
+              adventure. This approach is perfect for developers who deploy
+              frequently and need simplicity.
+          - text: "GitHub Flow is straightforward: there's only one main branch, often
+              called main or master, that's always deployable."
+          - text: For changes, developers create feature branches directly off of this main
+              branch, and once reviewed and tested, they're merged back into
+              main.
+          - text: The simplicity of GitHub Flow promotes continuous delivery, enabling
+              developers to release features or fixes as soon as they're ready.
+          - text: No complicated branch structures, just quick and iterative development
+              cycles. It's an excellent match for teams that value agility and
+              simplicity.
+          - text: "For a deep dive into GitHub Flow, you can explore this guide: [GitHub
+              Flow](https://guides.github.com/introduction/flow/)."
+          - text: If you're ready to keep flowing, let's move on to another strategy!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
