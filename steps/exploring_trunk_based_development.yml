@@ -1,0 +1,37 @@
+id: exploring_trunk_based_development
+learningObjectives:
+  - Examine the trunk-based development model.
+hints:
+  - The focus here is on frequent merges and simplicity.
+  - "Use this resource for more insights: [Trunk-Based
+    Development](https://trunkbaseddevelopment.com/)"
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Ah, trunk-based development, the strategy that keeps it simple and
+              efficient. This model is like the minimalist's dream of Git
+              branching. Let's dig into what makes it special.
+          - text: In trunk-based development, there's one main branch (the trunk) that
+              everyone commits to. Feature branches are short-lived, often just
+              for local development, until changes are stable enough to merge.
+          - text: This model emphasizes small, frequent merges into trunk, reducing the
+              complexity of integrating large changes later on.
+          - text: By limiting ongoing divergence, trunk-based development significantly
+              reduces the risk of massive merge conflicts, encouraging
+              continuous integration.
+          - text: "Want to really master this concept? Check out this comprehensive
+              resource: [Trunk-Based
+              Development](https://trunkbaseddevelopment.com/)"
+          - text: When you're ready, let's solidify our understanding with some questions
+              about these strategies!
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
